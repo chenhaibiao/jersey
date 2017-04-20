@@ -19,7 +19,7 @@
         <junit.version>4.11</junit.version>
         <log4j.version>1.2.16</log4j.version>
         <json-lib.version>2.4</json-lib.version>
-        <javax.servlet.version>3.0.1</javax.servlet.version>
+        <javax.servlet.version>3.1.0</javax.servlet.version>
         <jersey-spring3.version>2.23</jersey-spring3.version>
         <jersey-media-json-jackson.version>2.23</jersey-media-json-jackson.version>
         <spring.version>4.1.0.RELEASE</spring.version>

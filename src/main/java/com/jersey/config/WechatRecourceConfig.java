@@ -4,6 +4,8 @@ import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.spring.scope.RequestContextFilter;
 
+import com.jersey.filter.RequestFilter;
+
 public class WechatRecourceConfig extends ResourceConfig {
 
 	/**
@@ -18,11 +20,11 @@ public class WechatRecourceConfig extends ResourceConfig {
 		 * Spring filter 提供了 JAX-RS 和 Spring 请求属性之间的桥梁
 		 */
 		register(RequestContextFilter.class);
-		
 		/**
 		 * 包路径下符合要求的类将被发布成webservice  
 		 */
 		packages("com.jersey.controller");
-
+		
+		register(RequestFilter.class);
 	}
 }

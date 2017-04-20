@@ -30,10 +30,14 @@ public class ShopController {
     @Path("shopDetail")
 	@Consumes(MediaType.APPLICATION_JSON) 
     @Produces(MediaType.APPLICATION_JSON)  
-	public Shop shopDetail(@Context HttpServletRequest request, JSONObject jsonObj) {
-		logger.debug("jsonObj: " + jsonObj.toString());
-		logger.debug("shopId: " + jsonObj.getString("shopId"));
-		Shop shop = shopDao.getShopByShopId(jsonObj.getString("shopId"));
+	public Shop shopDetail(@Context HttpServletRequest request, JSONObject json) {
+		logger.debug("shopDetail");
+		if (null == json){
+			logger.info("json is null");
+		} else {
+			logger.debug("json: " + json.toString());
+		}
+		Shop shop = new Shop(); // shopDao.getShopByShopId(jsonObj.getString("shopId"));
 		return shop;
 	}
 	
